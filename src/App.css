@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: #efebe9;
+  font-family: 'Josefin Sans', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primaryColor{
+  background-color: #bcaaa4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fontColor{
+  color: #3e2723;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.customBtn{
+  display: inline-block;
+  background-color: #3e2723;
   color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
-
-.App-link {
-  color: #61dafb;
+.customBtn:hover{
+  display: inline-block;
+  background: #3e2723;
+  background: radial-gradient(ellipse at center, #564036 0%, #3E2723 100%);
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customBtnOutline{
+  background: none;
+  border: 2px solid #3e2723;
+  color: #3e2723;
+  padding: 5px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
+  scroll-behavior: smooth;
+}
+.card-shadow{
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
 }
