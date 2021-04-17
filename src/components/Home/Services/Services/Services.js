@@ -12,7 +12,7 @@ const Services = () => {
 
     
     return (
-        <section className="container-fluid my-5 services-container">
+        <section id="services" className="container-fluid my-5 services-container">
             <div className="text-center mb-5">
                 <h1 className="fontColor">Services</h1>
             </div>

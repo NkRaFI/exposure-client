@@ -38,7 +38,13 @@ html, body {
   padding: 5px 10px;
   border-radius: 5px;
   vertical-align: middle;
-  scroll-behavior: smooth;
+}
+.customBtnOutline:hover{
+  background: #3e2723;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 .card-shadow{
   box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);

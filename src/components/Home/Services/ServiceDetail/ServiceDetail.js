@@ -12,7 +12,7 @@ const ServiceDetail = ({ service }) => {
                 <h5 className="my-4">{service.name}</h5>
                 <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ut.</p>
                 <p>Taka: {service.price}</p>
-                <Link to='/booking'><button className="customBtn">Book Now</button></Link>
+                <Link to={`/booking/${service._id}`}><button className="customBtn">Book Now</button></Link>
             </div>
         </div>
     );

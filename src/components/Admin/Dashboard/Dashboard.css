@@ -1,0 +1,52 @@
+.adminDashboard{
+    background-color: #3e2723;
+    position: static;
+}
+.dashboardLink:focus,
+.dashboardLink:hover,
+.dashboardLink:visited,
+.dashboardLink:link,
+.dashboardLink:active {
+    text-decoration: none;
+}
+.dashboardLink{
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+.dashboardLink > img {
+    width: 3vw;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.adminTitle{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px;
+    background-color: #3e2723;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .adminDashboard{
+        background-color: #3e2723;
+        width: 25%;
+        height: 100vh;
+        position: fixed;
+    }
+    .dashboardLink{
+        color: white;
+        font-size: 1.5vw;
+        text-align: center;
+        margin: 10px 15px;
+        cursor: pointer;
+    }
+    .dashboardLink > img {
+        width: 1.5vw;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
