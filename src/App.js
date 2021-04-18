@@ -9,7 +9,7 @@ import NotFound from './components/NotFound/NotFound';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
-import Dashboard from './components/Admin/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 export const UserContext = createContext();
 

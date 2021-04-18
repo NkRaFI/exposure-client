@@ -7,7 +7,7 @@ const ServiceDetail = ({ service }) => {
         <div className="col-12 col-md-4 text-center">
             <div className="mb-5 bg-white px-3 py-4 rounded service-detail">
                 <div>
-                    <img style={{ height: '40px' }} src={service.image || cameraImg} alt="" />
+                    <img style={{ height:'60px',borderRadius:'20%' }} src={service.image || cameraImg} alt="" />
                 </div>
                 <h5 className="my-4">{service.name}</h5>
                 <p className="text-secondary">{service.description}</p>

@@ -69,9 +69,9 @@ const OrderList = () => {
                                             </button>
                                         }
                                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <button onClick={() => handleClick(order._id, 'pending')} className="dropdown-item">pending</button>
-                                            <button onClick={() => handleClick(order._id, 'on going')} className="dropdown-item">on going</button>
-                                            <button onClick={() => handleClick(order._id, 'done')} className="dropdown-item">done</button>
+                                            <button onClick={() => handleClick(order._id, 'pending')} className="dropdown-item text-danger">pending</button>
+                                            <button onClick={() => handleClick(order._id, 'on going')} className="dropdown-item text-primary">on going</button>
+                                            <button onClick={() => handleClick(order._id, 'done')} className="dropdown-item text-success">done</button>
                                         </ul>
                                     </div>
                                 </td>

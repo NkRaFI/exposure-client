@@ -16,7 +16,7 @@ const Testimonial = () => {
             <h1 className="fontColor text-center my-4">Clients Review</h1>
             <div className="row">
                 {
-                    testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial.key}></TestimonialCard>)
+                    testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial._id}></TestimonialCard>)
                 }
             </div>
         </section>

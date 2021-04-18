@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './Dashboard.css';
-import logoWhite from '../../../images/logo-white.png';
+import logoWhite from '../../images/logo-white.png';
 import { useEffect } from 'react/cjs/react.development';
-import Book from '../Book/Book';
-import BookingList from '../BookingList/BookingList';
-import AddReview from '../AddReview/AddReview';
-import OrderList from '../OrderList/OrderList';
+import BookingList from '../Customer/BookingList/BookingList';
+import Book from '../Admin/Book/Book';
+import AddReview from '../Customer/AddReview/AddReview';
+import OrderList from '../Admin/OrderList/OrderList';
+import AddService from '../Admin/AddService/AddService';
+
 
 const Dashboard = () => {
     const [component, setComponent] = useState('bookingList');
@@ -32,6 +34,7 @@ const Dashboard = () => {
                             <p onClick={() => setComponent('book')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">🛒</span> Book</p>
                             <p onClick={() => setComponent('review')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">💬</span> Review</p>
                             <p onClick={() => setComponent('orderList')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">📝</span> Order List</p>
+                            <p onClick={() => setComponent('addService')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">➕</span> Add Service</p>
                         </div>
                     </div>
                 </div>
@@ -52,6 +55,9 @@ const Dashboard = () => {
                         }
                         {
                             (component === 'orderList') && <OrderList></OrderList>
+                        }
+                        {
+                            (component === 'addService') && <AddService></AddService>
                         }
                     </div>
                 </div>

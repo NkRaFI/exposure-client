@@ -1,0 +1,15 @@
+.addService{
+    background-color: #bcaaa4;
+    padding: 20px;
+    border-radius: 15px;
+}
+::-webkit-file-upload-button {
+    color: #3e2723;
+    padding: 10px;
+    border: 2px solid #3e2723;
+    outline: none;
+    border-radius: 5px;
+  }
+label{
+      font-weight: 700;
+}
