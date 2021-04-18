@@ -12,9 +12,9 @@ const PaymentCardForm = ({ service }) => {
     const orderSuccess = (paymentId) => {
         const bookingInfo = {
             ...booking,
-            serviceName: service.name,
-            servicePrice: service.price,
+            serviceInfo:{...service},
             payId: paymentId,
+            status: "Pending",
             orderTime: new Date()
         }
 

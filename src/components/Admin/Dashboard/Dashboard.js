@@ -4,9 +4,12 @@ import './Dashboard.css';
 import logoWhite from '../../../images/logo-white.png';
 import { useEffect } from 'react/cjs/react.development';
 import Book from '../Book/Book';
+import BookingList from '../BookingList/BookingList';
+import AddReview from '../AddReview/AddReview';
+import OrderList from '../OrderList/OrderList';
 
 const Dashboard = () => {
-    const [component, setComponent] = useState('book');
+    const [component, setComponent] = useState('bookingList');
 
     const [service, setService] = useState({})
     const { id } = useParams();
@@ -24,10 +27,11 @@ const Dashboard = () => {
                 <div className="col-12 col-md-3">
                     <div className="adminDashboard py-3">
                         <Link className="logo-footer ms-3" to='/home'>Exposure <img src={logoWhite} alt="" /> </Link>
-                        <div className="d-flex flex-md-column justify-content-between justify-content-md-start align-items-start mt-3">
-                            <p onClick={() => setComponent('book')} className="dashboardLink"> <img src='' alt="" />Book</p>
-                            <p onClick={() => setComponent('addBook')} className="dashboardLink"> <img src='' alt="" />Add book</p>
-                            <p onClick={() => setComponent('editBook')} className="dashboardLink"> <img src='' alt="" />Edit book</p>
+                        <div className="d-flex flex-wrap flex-md-column justify-content-between justify-content-md-start align-items-start mt-3">
+                            <p onClick={() => setComponent('bookingList')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">🧾</span> Booking List</p>
+                            <p onClick={() => setComponent('book')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">🛒</span> Book</p>
+                            <p onClick={() => setComponent('review')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">💬</span> Review</p>
+                            <p onClick={() => setComponent('orderList')} className="dashboardLink"> <img src='' alt="" /><span className="me-1">📝</span> Order List</p>
                         </div>
                     </div>
                 </div>
@@ -38,13 +42,16 @@ const Dashboard = () => {
                     </div>
                     <div className="mt-4">
                         {
-                            (component === 'book') && <Book service={service} key={service._id}></Book>
+                            (component === 'bookingList') && <BookingList></BookingList>
                         }
                         {
-                            (component === 'addBook') && <h3>hello world</h3>
+                            (component === 'book') && <Book service={service}></Book>
                         }
                         {
-                            (component === 'editBook') && <h5 className="text-center mt-5">Edit coming soon....</h5>
+                            (component === 'review') && <AddReview></AddReview>
+                        }
+                        {
+                            (component === 'orderList') && <OrderList></OrderList>
                         }
                     </div>
                 </div>

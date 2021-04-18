@@ -10,7 +10,7 @@ const ServiceDetail = ({ service }) => {
                     <img style={{ height: '40px' }} src={service.image || cameraImg} alt="" />
                 </div>
                 <h5 className="my-4">{service.name}</h5>
-                <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ut.</p>
+                <p className="text-secondary">{service.description}</p>
                 <p>Taka: {service.price}</p>
                 <Link to={`/booking/${service._id}`}><button className="customBtn">Book Now</button></Link>
             </div>

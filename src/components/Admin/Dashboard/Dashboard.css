@@ -8,13 +8,17 @@
 .dashboardLink:link,
 .dashboardLink:active {
     text-decoration: none;
+    background-color: #bcaaa4;
+    transition: 0.5s ease-in-out;
+    color: #3e2723;
 }
 .dashboardLink{
     color: white;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     text-align: center;
-    margin: 10px 15px;
+    margin: 15px 0px;
     cursor: pointer;
+    padding: 5px;
 }
 .dashboardLink > img {
     width: 3vw;
@@ -36,13 +40,17 @@
         width: 25%;
         height: 100vh;
         position: fixed;
+        overflow: auto;
     }
     .dashboardLink{
         color: white;
-        font-size: 1.5vw;
+        font-size: 1.7vw;
         text-align: center;
-        margin: 10px 15px;
+        margin: 10px 0px;
+        padding-left: 5px;
         cursor: pointer;
+        width: 100%;
+        text-align: left;
     }
     .dashboardLink > img {
         width: 1.5vw;
