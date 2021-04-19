@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logoMain from '../../images/main-logo.png';
+import { UserContext } from '../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const handleSignOut =()=>{
+        setLoggedInUser({})
+        sessionStorage.removeItem('token')
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -18,6 +24,13 @@ const Navbar = () => {
                             <a className="nav-link ms-5" href="#services">Services</a >
                             <a className="nav-link ms-5" href="#reviews">Reviews</a >
                             <Link className="nav-link ms-5" to="/dashboard">Dashboard</Link>
+                            {
+                                sessionStorage.getItem('token')
+                                ?
+                                <Link onClick={handleSignOut} className="nav-link ms-5 customBtnOutline text-white" to="/login">Sign out</Link>
+                                :
+                                <Link className="nav-link ms-5 customBtn text-white" to="/login">Sign in</Link>
+                            }
                         </div>
                     </div>
                 </div>

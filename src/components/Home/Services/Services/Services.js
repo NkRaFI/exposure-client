@@ -4,13 +4,13 @@ import './Services.css';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://localhost:5000/services')
-        .then(res => res.json())
-        .then(data => setServices(data))
+            .then(res => res.json())
+            .then(data => setServices(data))
     }, [])
 
-    
+
     return (
         <section id="services" className="container-fluid my-5 services-container">
             <div className="text-center mb-5">
@@ -22,6 +22,14 @@ const Services = () => {
                         services?.map(service => <ServiceDetail service={service} key={service._id}></ServiceDetail>)
                     }
                 </div>
+                {
+                    (services?.length === 0) &&
+                    <div className="manageSpinner">
+                        <div className="spinner-border text-primary" role="status">
+                            <span className="sr-only"></span>
+                        </div>
+                    </div>
+                }
             </div>
         </section>
     );

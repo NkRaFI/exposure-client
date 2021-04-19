@@ -4,10 +4,10 @@ import TestimonialCard from '../TestimonialCard/TestimonialCard';
 
 const Testimonial = () => {
     const [testimonials, setTestimonials] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://localhost:5000/reviews')
-        .then(res => res.json())
-        .then(data => setTestimonials(data))
+            .then(res => res.json())
+            .then(data => setTestimonials(data))
     }, [])
 
 
@@ -19,6 +19,14 @@ const Testimonial = () => {
                     testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial._id}></TestimonialCard>)
                 }
             </div>
+            {
+                (testimonials?.length === 0) &&
+                <div className="manageSpinner">
+                    <div className="spinner-border text-primary" role="status">
+                        <span className="sr-only"></span>
+                    </div>
+                </div>
+            }
         </section>
     );
 };

@@ -30,7 +30,6 @@ const AddService = () => {
             image: imgUrl,
             description: data.description,
         };
-        console.log(newService);
 
         fetch('http://localhost:5000/addService', {
         method: 'POST', 
