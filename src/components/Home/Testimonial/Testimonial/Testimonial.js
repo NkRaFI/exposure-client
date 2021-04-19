@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import React, { useEffect, useState } from 'react';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
 
 const Testimonial = () => {
@@ -16,7 +15,7 @@ const Testimonial = () => {
             <h1 className="fontColor text-center my-4">Clients Review</h1>
             <div className="row">
                 {
-                    testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial._id}></TestimonialCard>)
+                    testimonials?.map(testimonial => <TestimonialCard testimonial={testimonial} key={testimonial._id}></TestimonialCard>)
                 }
             </div>
             {
