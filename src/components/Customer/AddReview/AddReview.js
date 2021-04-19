@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useJwt } from "react-jwt";
-import { useEffect } from 'react/cjs/react.development';
 import { useForm } from "react-hook-form";
 
 const AddReview = () => {

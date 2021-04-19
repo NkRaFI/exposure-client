@@ -1,7 +1,8 @@
 ### Exposure:
 A website for photographers
-## live preview:
 
+## live preview:
+https://exposure-nk.firebaseapp.com/
 
 ## About this website
 This is a website for photographers, in this website a photographer can show his/her works as portfolio, take bookings from customers, user friendly UI for customers and admin. Both user and admin have an dashboard for their activities.

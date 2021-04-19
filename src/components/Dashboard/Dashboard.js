@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useJwt } from "react-jwt";
 import './Dashboard.css';
 import logoWhite from '../../images/logo-white.png';
-import { useEffect } from 'react/cjs/react.development';
 import BookingList from '../Customer/BookingList/BookingList';
 import AddReview from '../Customer/AddReview/AddReview';
 import OrderList from '../Admin/OrderList/OrderList';
