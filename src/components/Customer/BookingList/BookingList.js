@@ -8,7 +8,7 @@ const BookingList = () => {
     const [bookings, setBookings] = useState([])
     useEffect(() => {
         if (decodedToken) {
-            fetch(`http://localhost:5000/bookingsByEmail?email=${decodedToken?.email}`)
+            fetch(`https://limitless-caverns-60181.herokuapp.com/bookingsByEmail?email=${decodedToken?.email}`)
                 .then(res => res.json())
                 .then(data => setBookings(data))
         }

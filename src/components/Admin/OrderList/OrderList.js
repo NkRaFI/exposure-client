@@ -5,13 +5,13 @@ import './OrderList.css';
 const OrderList = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://limitless-caverns-60181.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
 
     const handleClick = (serviceId, status) => {
-        fetch(`http://localhost:5000/updateStatus/${serviceId}`, {
+        fetch(`https://limitless-caverns-60181.herokuapp.com/updateStatus/${serviceId}`, {
             method: 'PATCH',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
@@ -21,7 +21,7 @@ const OrderList = () => {
             .then(res => res.json())
             .then(result => {
                 if(result){
-                    fetch('http://localhost:5000/orders')
+                    fetch('https://limitless-caverns-60181.herokuapp.com/orders')
                     .then(res => res.json())
                     .then(data => setOrders(data))
                 }

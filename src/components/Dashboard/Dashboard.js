@@ -22,7 +22,7 @@ const Dashboard = () => {
     const { id } = useParams();
     useEffect(() => {
         if (id) {
-            fetch(`http://localhost:5000/serviceById/${id}`)
+            fetch(`https://limitless-caverns-60181.herokuapp.com/serviceById/${id}`)
                 .then(res => res.json())
                 .then(data => setService(data))
         }
@@ -34,7 +34,7 @@ const Dashboard = () => {
     useEffect(() => {
 
         if (decodedToken) {
-            fetch('http://localhost:5000/isAdmin', {
+            fetch('https://limitless-caverns-60181.herokuapp.com/isAdmin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: decodedToken.email })

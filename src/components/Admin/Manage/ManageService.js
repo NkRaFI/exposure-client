@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ManageService = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://limitless-caverns-60181.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     const handleDelete = (serviceId) => {
-        fetch(`http://localhost:5000/deleteService/${serviceId}`,{
+        fetch(`https://limitless-caverns-60181.herokuapp.com/deleteService/${serviceId}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -17,7 +17,7 @@ const ManageService = () => {
             
             alert("service deleted successfully")
             if(result){
-                fetch('http://localhost:5000/services')
+                fetch('https://limitless-caverns-60181.herokuapp.com/services')
                 .then(res => res.json())
                 .then(data => setServices(data))
             }
