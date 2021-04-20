@@ -10,15 +10,15 @@ const Footer = () => {
         <footer className="container-fluid footer-container py-5 mt-4">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 mb-2 mb-md-0">
                         <h4 className="logo-footer">Exposure <img src={logoWhite} alt=""/></h4>
                     </div>
-                    <div className="col-12 col-md-4 text-start">
+                    <div className="col-12 col-md-4 mb-2 mb-md-0 text-start">
                         <p><FontAwesomeIcon icon={faPhoneAlt} /> +880-2-7708003</p>
                         <p><FontAwesomeIcon icon={faEnvelope} /> www.exposure@web.com</p>
                         <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Nabinagar, Savar, Dhaka, Bangladesh</p>
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 mb-2 mb-md-0">
                         <h5>Stay connected</h5>
                         <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//instagram.com" rel="noreferrer" target='_blank'><FontAwesomeIcon className="icon" icon={faInstagram} /></a></li>

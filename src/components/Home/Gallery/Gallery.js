@@ -14,12 +14,12 @@ const Gallery = () => {
             </div>
             <div className="row">
                 <div className="col-12 col-md-11 offset-md-1 gallery-container text-center">
-                    <img src="https://source.unsplash.com/random/300x301" alt="" className="img-fluid" />
-                    <img src="https://source.unsplash.com/random/300x302" alt="" className="img-fluid" />
-                    <img src="https://source.unsplash.com/random/300x303" alt="" className="img-fluid" />
-                    <img src="https://source.unsplash.com/random/300x304" alt="" className="img-fluid" />
-                    <img src="https://source.unsplash.com/random/300x305" alt="" className="img-fluid" />
-                    <img src="https://source.unsplash.com/random/300x300" alt="" className="img-fluid" />
+                    <img src="https://source.unsplash.com/random/300x301" alt="" className="img-fluid service-image" />
+                    <img src="https://source.unsplash.com/random/300x302" alt="" className="img-fluid service-image" />
+                    <img src="https://source.unsplash.com/random/300x303" alt="" className="img-fluid service-image" />
+                    <img src="https://source.unsplash.com/random/300x304" alt="" className="img-fluid service-image" />
+                    <img src="https://source.unsplash.com/random/300x305" alt="" className="img-fluid service-image" />
+                    <img src="https://source.unsplash.com/random/300x300" alt="" className="img-fluid service-image" />
                 </div>
             </div>
         </section>

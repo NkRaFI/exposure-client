@@ -31,8 +31,8 @@ const AddReview = () => {
     };
 
     return (
-        <section className="row">
-            <div className="col-12 col-md-6 ms-md-5 mt-3">
+        <section className="row p-2">
+            <div className="col-12 col-md-6 ms-md-4 mt-2">
                 <h5 className="fontColor">Leave a review 💬</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="form-control mb-3" type="text" {...register("name", { required: true })} placeholder="Your Name" />

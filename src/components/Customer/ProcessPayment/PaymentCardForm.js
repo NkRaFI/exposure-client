@@ -14,7 +14,7 @@ const PaymentCardForm = ({ service }) => {
             ...booking,
             serviceInfo:{...service},
             payId: paymentId,
-            status: "Pending",
+            status: "pending",
             orderTime: new Date()
         }
 

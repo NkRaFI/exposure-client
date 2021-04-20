@@ -15,7 +15,7 @@ const MakeAdmin = () => {
         })
     };
     return (
-        <div className="col-12 col-md-6 ms-md-3">
+        <div className="col-12 col-md-6 ms-md-3 p-2">
             <h4 className="fontColor">Add an Admin</h4>
             <form onSubmit={handleSubmit(onSubmit)} className="text-center">
                 <input className="form-control mb-3" {...register("email", { required: true })} placeholder="Email"/>
